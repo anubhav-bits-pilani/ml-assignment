@@ -1,0 +1,247 @@
+{
+  "feature_names": [
+    "Area",
+    "Perimeter",
+    "MajorAxisLength",
+    "MinorAxisLength",
+    "AspectRation",
+    "Eccentricity",
+    "ConvexArea",
+    "EquivDiameter",
+    "Extent",
+    "Solidity",
+    "roundness",
+    "Compactness",
+    "ShapeFactor1",
+    "ShapeFactor2",
+    "ShapeFactor3",
+    "ShapeFactor4"
+  ],
+  "class_names": [
+    "BARBUNYA",
+    "BOMBAY",
+    "CALI",
+    "DERMASON",
+    "HOROZ",
+    "SEKER",
+    "SIRA"
+  ],
+  "target": "Class",
+  "seed": 5327,
+  "test_size": 0.2,
+  "dataset": {
+    "rows_raw": 13611,
+    "exact_duplicates_dropped": 68,
+    "conflicting_rows_dropped": 0,
+    "rows_clean": 13543
+  },
+  "class_counts_clean": {
+    "DERMASON": 3546,
+    "SIRA": 2636,
+    "SEKER": 2027,
+    "HOROZ": 1860,
+    "CALI": 1630,
+    "BARBUNYA": 1322,
+    "BOMBAY": 522
+  },
+  "n_train": 10836,
+  "n_test": 2707,
+  "env": {
+    "python": "3.13.7",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "hostname": "anubhav_sharma",
+    "timestamp": "2026-11-06T12:47:08"
+  },
+  "models": [
+    {
+      "slug": "logistic_regression",
+      "name": "Logistic Regression",
+      "required": true,
+      "file": "logistic_regression.pkl",
+      "params": {
+        "lr": 0.1,
+        "l2": 0.0
+      },
+      "tuned": true,
+      "fit_seconds": 1.41,
+      "has_proba": true
+    },
+    {
+      "slug": "decision_tree",
+      "name": "Decision Tree",
+      "required": true,
+      "file": "decision_tree.pkl",
+      "params": {
+        "criterion": "entropy",
+        "max_depth": 10,
+        "min_samples_leaf": 5
+      },
+      "tuned": true,
+      "fit_seconds": 2.42,
+      "has_proba": true
+    },
+    {
+      "slug": "knn",
+      "name": "KNN",
+      "required": true,
+      "file": "knn.pkl",
+      "params": {
+        "k": 15,
+        "weights": "distance",
+        "metric": "euclidean"
+      },
+      "tuned": true,
+      "fit_seconds": 0.0,
+      "has_proba": true
+    },
+    {
+      "slug": "naive_bayes",
+      "name": "Naive Bayes",
+      "required": true,
+      "file": "naive_bayes.pkl",
+      "params": {
+        "var_smoothing": 0.01
+      },
+      "tuned": true,
+      "fit_seconds": 0.01,
+      "has_proba": true
+    },
+    {
+      "slug": "svm",
+      "name": "Support Vector Machine",
+      "required": true,
+      "file": "svm.pkl",
+      "params": {
+        "C": 1000.0,
+        "gamma": 0.003
+      },
+      "tuned": true,
+      "fit_seconds": 22.42,
+      "has_proba": false
+    },
+    {
+      "slug": "linear_svm",
+      "name": "Linear SVM",
+      "required": false,
+      "file": "linear_svm.pkl",
+      "params": {
+        "C": 1.0
+      },
+      "tuned": true,
+      "fit_seconds": 0.55,
+      "has_proba": false
+    },
+    {
+      "slug": "perceptron",
+      "name": "Averaged Perceptron",
+      "required": false,
+      "file": "perceptron.pkl",
+      "params": {},
+      "tuned": false,
+      "fit_seconds": 1.85,
+      "has_proba": false
+    },
+    {
+      "slug": "lda",
+      "name": "LDA",
+      "required": false,
+      "file": "lda.pkl",
+      "params": {
+        "shrinkage": 0.0
+      },
+      "tuned": true,
+      "fit_seconds": 0.01,
+      "has_proba": true
+    },
+    {
+      "slug": "qda",
+      "name": "QDA",
+      "required": false,
+      "file": "qda.pkl",
+      "params": {
+        "reg_param": 0.01
+      },
+      "tuned": true,
+      "fit_seconds": 0.01,
+      "has_proba": true
+    },
+    {
+      "slug": "random_forest",
+      "name": "Random Forest",
+      "required": false,
+      "file": "random_forest.pkl",
+      "params": {
+        "n_estimators": 100,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1
+      },
+      "tuned": false,
+      "fit_seconds": 71.45,
+      "has_proba": true
+    },
+    {
+      "slug": "adaboost",
+      "name": "AdaBoost (SAMME)",
+      "required": false,
+      "file": "adaboost.pkl",
+      "params": {
+        "n_estimators": 150,
+        "max_depth": 2,
+        "learning_rate": 0.5
+      },
+      "tuned": false,
+      "fit_seconds": 30.61,
+      "has_proba": true
+    },
+    {
+      "slug": "gradient_boosting",
+      "name": "Gradient Boosting",
+      "required": false,
+      "file": "gradient_boosting.pkl",
+      "params": {
+        "n_estimators": 300,
+        "learning_rate": 0.1,
+        "max_depth": 3
+      },
+      "tuned": false,
+      "fit_seconds": 96.84,
+      "has_proba": true
+    },
+    {
+      "slug": "mlp",
+      "name": "MLP Neural Net",
+      "required": false,
+      "file": "mlp.pkl",
+      "params": {
+        "hidden": [
+          128,
+          64
+        ],
+        "l2": 0.001
+      },
+      "tuned": true,
+      "fit_seconds": 8.68,
+      "has_proba": true
+    },
+    {
+      "slug": "soft_voting",
+      "name": "Soft Voting Ensemble",
+      "required": false,
+      "file": "soft_voting.pkl",
+      "params": {
+        "members": [
+          "logistic_regression",
+          "knn",
+          "random_forest",
+          "gradient_boosting",
+          "mlp"
+        ]
+      },
+      "tuned": false,
+      "fit_seconds": 0.0,
+      "has_proba": true
+    }
+  ]
+}
