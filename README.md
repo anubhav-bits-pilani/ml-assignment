@@ -2,7 +2,7 @@
 
 **ML Assignment 2 · AIMLZG565 · M.Tech AIML (WILP) · Student ID: 2026AJ05327**
 
-Live app: **https://YOUR-APP-NAME.streamlit.app**
+Live app: **https://anubhav-sharma-ml-assignment.streamlit.app**
 
 ---
 
@@ -54,7 +54,7 @@ each saved model.
 
 ## c. GitHub repository link
 
-**https://github.com/YOUR-USERNAME/drybean-ml**
+**https://github.com/anubhav-bits-pilani/ml-assignment**
 
 ```
 drybean-ml/
@@ -151,7 +151,7 @@ of LR + KNN + RF + GB + MLP.
 
 ## Streamlit app
 
-**https://YOUR-APP-NAME.streamlit.app**
+**https://anubhav-sharma-ml-assignment.streamlit.app**
 
 Controls at the top of the page: **① upload a test CSV** (the bundled `test_data.csv` is used if nothing is
 uploaded, and there's a button to download it) and **② a model dropdown** with all 14 models (★ = required).
@@ -173,5 +173,3 @@ python train.py                    # full retrain incl. CV grid search (~2-3 min
 
 The pickles were saved with Python 3.12 / NumPy 2.5 — on Streamlit Cloud pick **Python 3.12** under *Advanced
 settings*.
-
-An AI assistant was used as a coding and learning aid while building this project.
